@@ -1,0 +1,137 @@
+﻿/* Global styles */
+:root {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: #0c4a6e;
+    color: white;
+    padding: .75rem 1rem;
+}
+
+.container {
+    padding: 1rem;
+    /* max-width: 1100px; */
+    margin: 0 auto;
+}
+
+.container-detail {
+    padding: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.container-detail a {
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table tbody td {
+    border: 1px solid #ddd;
+    padding: .5rem .6rem;
+}
+
+.table th {
+    background: #f5f5f5;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="search"] {
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.badge {
+    display: inline-block;
+    padding: .1rem .5rem;
+    background: #eef;
+    border: 1px solid #ccd;
+    border-radius: 3px;
+    margin-right: .25rem;
+}
+
+.users-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.users-table th,
+.users-table td {
+    /* border: 1px solid #ccc; */
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.users-table th {
+    background-color: #f4f4f4;
+}
+
+.users-table a {
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 30%;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.user-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.user-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.user-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user-item {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.user-item p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #374151;
+}
+
+.user-item strong {
+    color: #111827;
+}

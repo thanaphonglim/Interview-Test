@@ -1,0 +1,66 @@
+﻿<div class="container-detail">
+    <a (click)="routeMain()">&larr; Back to Users</a>
+
+    <h2>User Detail</h2>
+
+    <div class="user-card" *ngIf="user() as u">
+        <div class="user-title">
+            {{ u.firstName }} {{ u.lastName }}
+        </div>
+
+        <div class="user-grid">
+            <div class="user-item">
+                <p><strong>ID:</strong> {{ u.id }}</p>
+            </div>
+
+            <div class="user-item">
+                <p><strong>UserId:</strong> {{ u.userId }}</p>
+            </div>
+
+            <div class="user-item">
+                <p><strong>Username:</strong> {{ u.username }}</p>
+            </div>
+
+
+        </div>
+        <div class="user-item">
+            <p><strong>Age:</strong> {{ u.age || 'N/A' }}</p>
+        </div>  
+    </div>
+
+    <h3>Roles ({{ user()?.roles?.length || 0 }})</h3>
+
+    <table class="table table-striped" *ngIf="user() as u">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Role ID</th>
+                <th>Role Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let role of u.roles; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ role.roleId }}</td>
+                <td>{{ role.roleName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Permissions ({{ user()?.permissions?.length || 0 }})</h3>
+
+    <table class="table table-striped" *ngIf="user() as u">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Permission</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of u.permissions; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ p }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
